@@ -1,0 +1,88 @@
+/* Importando a fonte Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  padding: 10px 10%;
+  background: #1e1e1e; /* Verde escuro */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  font-size: 32px;
+  color: #fff;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+
+.logo img {
+  top: 0%;
+  height: 40px;
+  width: auto; /* Mantém a proporção da imagem */
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 40px;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #1e90ff; /* Azul claro */
+  text-shadow: 0 0 5px rgba(30, 144, 255, 0.7);
+}
+
+/* ...restante do seu CSS... */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: block;
+  position: absolute;
+  background-color: #333; /* Cor de fundo do dropdown */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  margin-top: 5px;
+  margin-left: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #222222; /* Azul claro */
+}

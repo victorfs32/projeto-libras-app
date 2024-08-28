@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box {
+  position: relative;
+  padding: 20px 40px;
+  background-color: #000508;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.H1 {
+  color: #fff;
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Estilo Snake para bordas animadas */
+.box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #07e2f1, #eb9b05, #07e2f1, #eb9b05);
+  background-size: 400%;
+  z-index: 0;
+  border-radius: 30px;
+  padding: 5px;
+  box-sizing: border-box;
+  animation: animateBorder 5s linear infinite;
+}
+
+@keyframes animateBorder {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+
+/* Adiciona uma camada interna para o fundo */
+.box::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background-color: #000508;
+  border-radius: inherit;
+  z-index: 0;
+}
